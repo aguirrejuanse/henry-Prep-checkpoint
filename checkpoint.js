@@ -48,9 +48,7 @@ function buscarAmigo(amigos, nombre) {
   // Ej:
   //  var amigos = [{ nombre: 'toni', edad: 33 } , { nombre: 'Emi', edad: 25 }];
   //  buscarAmigo(amigos, 'toni') // retorna { nombre: 'toni', edad: 33 };
-  amigos.forEach(function(nombre){
-    return nombre;
-  })
+  return amigos[nombre]();
  
 }
 
@@ -128,12 +126,13 @@ function crearClasePersona() {
       // de la persona.
       // Ej:
       // persona.getFriends() // retorna ['toni', 'Leo', 'Manu']
-      var friends = [];
-      for (let i = 1; i < this.amigos.length; i++) {
-        friends.push(this.amigos[i].nombre);
-        
-      }
-      return friends;
+     var friends = []
+     for (let i = 0; i < this.amigos.length; i++) {
+       friends.push(this.amigos[i].nombre);
+       
+     }
+      
+    
     }
 
     getHobbies() {
@@ -157,13 +156,13 @@ function crearClasePersona() {
       //   }]
       // }
       // persona.getPromedioEdad() // retorna 29
-      return this.amigos[0].edad;
-      var totalEdad = this.edad[0]
-      for (let i = 1; i < this.amigos.length; i++) {
-        totalEdad = totalEdad + this.amigos[i];
+      var totalEdad = [this.amigos[0].edad];
+      for (let i = 1; i < this.amigos[edad].length; i++) {
+        totalEdad = totalEdad + this.amigos[edad][i];
         
       }
-      return totalEdad/this.amigos.length;
+      return TotalEdad;
+      
     }
     
   };
