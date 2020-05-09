@@ -1,0 +1,19 @@
+#div{
+    margin-left: auto;
+    margin-right: auto;
+    width: 500px;
+    background-color: yellow;
+    font-size: 25px;
+    color: red;
+}
+
+#letra{
+    color: black;
+}
+#fotodegato{
+    display: block;
+    margin: auto;
+}
+#click:hover{
+    color: chartreuse;
+}
